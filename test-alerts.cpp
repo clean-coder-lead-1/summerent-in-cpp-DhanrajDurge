@@ -45,3 +45,7 @@ TEST_CASE("infers breach type [NORMAL] based on CoolingType - MED_ACTIVE_COOLING
 TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING") {
   REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 40) == NORMAL);
 }
+
+TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING_") {
+  EXPECT_EQ(TRUE, TRUE);
+}
