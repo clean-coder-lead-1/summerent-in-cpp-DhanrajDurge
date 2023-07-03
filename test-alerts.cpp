@@ -48,5 +48,5 @@ TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING"
 
 TEST_CASE("checkAndAlert") {
 BatteryCharacter battery={PASSIVE_COOLING, "abc"};
-  REQUIRE(checkAndAlert(TO_CONTROLLER, classifyTemperatureBreach(battery.CoolingType, 40) == TOO_HIGH);
+  REQUIRE(checkAndAlert(TO_CONTROLLER, battery, 40);
 }
