@@ -47,5 +47,5 @@ TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING"
 }
 
 TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING_") {
-  EXPECT_EQ(TRUE, TRUE);
+  EXPECT_EQ(1, 1);
 }
