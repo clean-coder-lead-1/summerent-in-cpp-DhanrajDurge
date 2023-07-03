@@ -46,3 +46,4 @@ You have seen a few workflows in this repository. They are quality-gates to prev
 
 During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!)
 **Refactoring the code hence reducing complexity**
+**Avoid duplications of lines**
