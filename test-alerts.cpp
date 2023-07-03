@@ -16,7 +16,7 @@ TEST_CASE("infers breach type [TOO_HIGH] based on CoolingType - PASSIVE_COOLING"
 }
 
 TEST_CASE("infers breach type [TOO_HIGH] based on CoolingType - MED_ACTIVE_COOLING") {
-  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 45) == TOO_HIGH);
+  REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 45) == TOO_HIGH);
 }
 TEST_CASE("infers breach type [TOO_HIGH] based on CoolingType - HI_ACTIVE_COOLING") {
   REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 50) == TOO_HIGH);
