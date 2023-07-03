@@ -46,7 +46,27 @@ TEST_CASE("infers breach type [NORMAL] based on CoolingType - HI_ACTIVE_COOLING"
   REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 40) == NORMAL);
 }
 
-TEST_CASE("checkAndAlert") {
-BatteryCharacter battery={PASSIVE_COOLING, "abc"};
-  REQUIRE(checkAndAlert(TO_CONTROLLER, battery, 40));
+SCENARIO("checkAndAlert", "[checkAndAlert Test Cases]")
+{
+	GIVEN("Cooling Type is PASSIVE_COOLING and Temperature")
+	{
+		BatteryCharacter BatteryChar;
+		BatteryChar.coolingType = PASSIVE_COOLING;	
+		WHEN("coolingType is PASSIVE_COOLING")
+		{
+			checkAndAlert(TO_CONTROLLER, BatteryChar, 40);
+			THEN("BreachType return TOO_HIGH")
+			{
+				REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, 40) == TOO_HIGH);
+			}
+		}
+		WHEN("coolingType is PASSIVE_COOLING")
+		{
+			checkAndAlert(TO_EMAIL, BatteryChar, 40);
+			THEN("BreachType return TOO_HIGH")
+			{
+				REQUIRE(classifyTemperatureBreach(PASSIVE_COOLING, 40) == TOO_HIGH);
+			}
+		}
+	}
 }
