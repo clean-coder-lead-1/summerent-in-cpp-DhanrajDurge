@@ -25,7 +25,6 @@ BreachType classifyTemperatureBreach(
     else( coolingType == HI_ACTIVE_COOLING) {
       upperLimit = 45;
     }
-  }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
 
